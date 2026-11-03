@@ -10,13 +10,13 @@ Quy ước dùng trong góc để rẽ robot:
 **/
 
 void thang(int kc) {
-  LbMotion.runLRrpm(30, 30);
+  LbMotion.runLRrpm(50, 50);
   LbMotion.waitDistanceMm(kc * 10);
   LbMotion.stopAndWait();
 }
 
 void lui(int kc) {
-  LbMotion.runLRrpm(-30, -30);
+  LbMotion.runLRrpm(-50, -50);
   LbMotion.waitDistanceMm(kc * 10);
   LbMotion.stopAndWait();
 }
