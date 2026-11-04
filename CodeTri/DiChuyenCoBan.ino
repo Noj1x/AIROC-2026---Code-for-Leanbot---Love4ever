@@ -4,11 +4,6 @@
 
 // các hàm di chuyển cơ bản, có quy ước để rẽ tốt nhất
 
-/**
-Quy ước dùng trong góc để rẽ robot:
-- 90 độ : 85
-**/
-
 void thang(int kc) {
   LbMotion.runLRrpm(50, 50);
   LbMotion.waitDistanceMm(kc * 10);
