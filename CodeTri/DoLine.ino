@@ -1,6 +1,6 @@
 // Cấu hình thư viện và biến toàn cục
 #include <Leanbot.h>
-int distance,target,line,speed,test;
+int distance,target,line,speed;
 //===========================================
 
 // Dò line và đi theo line===================
@@ -15,14 +15,14 @@ void runFollowLine() {
     case 14:
     case 12:
     case 8:
-      LbMotion.runLR(speed / 8, speed);
+      LbMotion.runLR(speed / 4, speed);
       break;
 
     case 2:
     case 7:
     case 3:
     case 1:
-      LbMotion.runLR(speed, speed / 8);
+      LbMotion.runLR(speed, speed / 4);
       break;
 
     case 9:
@@ -30,7 +30,6 @@ void runFollowLine() {
     case 11:
     case 10:
     case 5:
-      test = 123;
       break;
 
     default:
@@ -84,8 +83,8 @@ void setup() {
 void loop() {
   LbMission.begin( TB1A + TB1B );
 
-  speed = 1500;      //speed luôn bằng 1500 để chuẩn xác
-  distance = 400;    //distance chỉnh theo số đường cần đi (linh hoạt)
+  speed = 2000;      //speed luôn bằng 2000 để chuẩn xác
+  distance = 300;    //distance chỉnh theo số đường cần đi (linh hoạt)
   followLine();
   LbMotion.stopAndWait();
   
