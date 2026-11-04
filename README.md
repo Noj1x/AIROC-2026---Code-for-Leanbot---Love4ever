@@ -14,7 +14,7 @@
 
 * #### Lưu ý về các hàm rẽ:
 * nếu muốn rẽ 1 góc 90 độ, hãy set 90
-* nếu muốn rẽ góc lớn hơn, hãy nhân lên rồi thêm "1 tí" đơn vị vào (trong lúc thi sẽ cân chỉnh cho hoàn hảo)
+* nếu muốn rẽ góc lớn hơn, hãy nhân lên rồi thêm "1 tí" đơn vị vào (trong lúc thi sẽ cân chỉnh cho hoàn hảo) PS: hoặc ko cx đc :))
 
 
 
