@@ -24,3 +24,8 @@
 * dò line này sẽ dò theo khoảng cách nên đi sẽ chuẩn hơn, muốn đi 1 đoạn hãy set 150, rẽ bao nhiêu thì set bấy nhiêu nhân lên.
 * đoạn cong ở góc bản đồ có giá trị 300
 
+
+
+* #### lưu ý về việc gắp khối:
+* khi muốn đi đến vị trí gắp khối, nếu phải rẽ và quệt vào khối, hãy chỉnh distance nhỏ hơn 1 chút để robot rẽ tốt hơn.
+
