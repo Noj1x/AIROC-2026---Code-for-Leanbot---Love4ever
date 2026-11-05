@@ -5,13 +5,13 @@
 // các hàm di chuyển cơ bản, có quy ước để rẽ tốt nhất
 
 void thang(int kc) {
-  LbMotion.runLRrpm(50, 50);
+  LbMotion.runLRrpm(30, 30);
   LbMotion.waitDistanceMm(kc * 10);
   LbMotion.stopAndWait();
 }
 
 void lui(int kc) {
-  LbMotion.runLRrpm(-50, -50);
+  LbMotion.runLRrpm(-30, -30);
   LbMotion.waitDistanceMm(kc * 10);
   LbMotion.stopAndWait();
 }
