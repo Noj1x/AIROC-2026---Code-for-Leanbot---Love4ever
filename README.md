@@ -38,8 +38,9 @@
 ![Ảnh](Anh/quyuoc.png)
 
 * muốn đi từ A đến B: hãy set distance = 150, muốn đi khoảng nhiều hơn set lớn hơn.
-* muốn đi từ A đến E, hãy set rẽ 1 góc 40 độ và đi 5cm.
+* muốn đi từ A đến E, hãy set rẽ 1 góc 40 độ và đi 7cm.
 * muốn đi từ A đến H, hãy set rẽ 1 góc 90 độ và distance = 150.
-* muốn đi từ A đến G, hãy set rẽ 1 góc 140 độ và đi 5cm.
-* muốn đi từ C đến D, hãy để distance = 300.
+* muốn đi từ A đến G, hãy set rẽ 1 góc 140 độ và đi 7cm.
+* muốn đi từ C đến D, hãy set distance = 300.
+* muốn đi từ C đến I, hãy set rẽ 1 góc 55 độ và đi 4cm.
 
