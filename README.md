@@ -35,7 +35,7 @@
 
 * # Cụ thể về các góc và khoảng cách để dùng:
 
-!\[Ảnh](\\Anh\\quyuoc.png)
+!\[Ảnh](Anh\\quyuoc.png)
 
 * muốn đi từ A đến B: hãy set distance = 150, muốn đi khoảng nhiều hơn set lớn hơn.
 * muốn đi từ A đến E, hãy set rẽ 1 góc 40 độ và đi 5cm.
