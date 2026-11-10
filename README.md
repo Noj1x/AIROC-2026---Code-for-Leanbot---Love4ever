@@ -29,3 +29,17 @@
 * #### lưu ý về việc gắp khối:
 * khi muốn đi đến vị trí gắp khối, nếu phải rẽ và quệt vào khối, hãy chỉnh distance nhỏ hơn 1 chút để robot rẽ tốt hơn.
 
+
+
+
+
+* # Cụ thể về các góc và khoảng cách để dùng:
+
+!\[Ảnh](C:\\Users\\PHAN NGHIA\\Pictures)
+
+* muốn đi từ A đến B: hãy set distance = 150, muốn đi khoảng nhiều hơn set lớn hơn.
+* muốn đi từ A đến E, hãy set rẽ 1 góc 40 độ và đi 5cm.
+* muốn đi từ A đến H, hãy set rẽ 1 góc 90 độ và distance = 150.
+* muốn đi từ A đến G, hãy set rẽ 1 góc 140 độ và đi 5cm.
+* muốn đi từ C đến D, hãy để distance = 300.
+
