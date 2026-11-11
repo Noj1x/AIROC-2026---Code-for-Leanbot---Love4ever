@@ -205,26 +205,75 @@ void trai(int goc) {
 }
 //==============================================
 
-// chay robot
-void HandleE3(){
-	chay(13);
+// Cấu hình Leanbot===============================
+void setup() {
+  Leanbot.begin();
+  LbIRLine.doManualCalibration(TB1A);
+  APDS.begin();
+}
+//================================================
+
+//chay robot
+void HandleH2(){
+	chay(10);
+	phai(90);
+	distance = 75;
+	followLine();
+	LbMotion.stopAndWait();
 	phai(40);
+	chay(10);
+	mau = Obj_detectColor();
+	if(mau == "Green" || mau == "Blue" || mau == "Purple"){
+		HandleH2Color();
+	}
+	else HandleH2CRL();
+}
+void HandleH2Color(){
+	chay(5);
+	lui(15);
+	phai(40);
+	distance = 310;
+	followLine();
+	LbMotion.stopAndWait();
+	LbGripper.moveTo(60);
+  lui(15);
+	phai(180);
+  distance = 150;
+	followLine();
+	LbMotion.stopAndWait();
+	phai(140);
+	chay(15);
+	LbGripper.open();
+	lui(15);
+	trai(40);
+	HandleE3();
+}
+
+void HandleH2CRL(){
+	LbGripper.moveTo(60);
+	lui(10);
+	phai(90);
+	chay(15);
+  LbGripper.open();
+	lui(15);
+	trai(140);
+	HandleE3();
+}
+void HandleE3(){
 	distance = 300;
 	followLine();
 	LbMotion.stopAndWait();
 	trai(140);
-	chay(7);
+	chay(10);
 	mau = Obj_detectColor();
-	if(mau == "Green" || mau == "Purple" || mau == "Blue"){
+	if(mau == "Green" || mau == "Blue" || mau == "Purple"){
 		HandleE3Color();
 	}
-	else{
-		HandleE3CRL();
-	}
+	else HandleE3CRL();
 }
 void HandleE3Color(){
-	chay(12);
-	lui(20);
+	chay(5);
+	lui(15);
 	trai(140);
 	distance = 300;
 	followLine();
@@ -235,113 +284,87 @@ void HandleE3Color(){
 	LbMotion.stopAndWait();
 	trai(35);
 	chay(5);
-	LbGripper.moveTo(50);
+	LbGripper.moveTo(60);
 	lui(5);
 	trai(140);
-	distance = 135;
 	followLine();
 	LbMotion.stopAndWait();
 	trai(90);
-	distance = 285;
+	distance = 300;
 	followLine();
 	LbMotion.stopAndWait();
 	trai(40);
 	chay(15);
 	LbGripper.open();
 	lui(15);
-	phai(140);
-	F3fromE3();
-}
-
-void F3fromE3(){
-	distance = 300;
-	followLine();
-	LbMotion.stopAndWait();
-	phai(90);
-	distance = 150;
-	followLine();
-	LbMotion.stopAndWait();
-}
-
-void HandleE3CRL(){
-	LbGripper.moveTo(50);
-	lui(7);
-	trai(40);
-	distance = 300;
-	followLine();
-	LbMotion.stopAndWait();
-	trai(40);
-	chay(30);
-	LbGripper.open();
-	lui(30);
-	F3fromCRL();
-}
-
-void F3fromCRL(){
 	trai(140);
-	distance = 600;
+	HandleF4fromE3();
+}
+void HandleE3CRL(){
+	LbGripper.moveTo(60);
+	lui(10);
+	trai(40);
+	distance = 300;
+	followLine();
+	LbMotion.stopAndWait();
+	trai(40);
+	chay(15);
+	lui(15);
+	trai(140);
+	HandleF4fromCRL();
+}
+void HandleF4fromE3(){
+	distance = 300;
+	followLine();
+	LbMotion.stopAndWait();
+	trai(140);
+	chay(10);
+	mau = Obj_detectColor();
+	if(mau == "Green" || mau == "Blue" || mau == "Purple"){
+		HandleF4Color();
+	}
+	else HandleF4CRL();
+}
+void HandleF4fromCRL(){
+	distance = 300;
 	followLine();
 	LbMotion.stopAndWait();
 	phai(90);
-	distance = 150;
+	followLine();
+	LbMotion.stopAndWait();
+	trai(140);
+	chay(10);
+	if(mau == "Green" || mau == "Blue" || mau == "Purple"){
+		HandleF4Color();
+	}
+	else HandleF4CRL();
+}
+void HandleF4Color(){
+	chay(5);
+	lui(15);
+	trai(140);
+	distance = 300;
 	followLine();
 	LbMotion.stopAndWait();
 	phai(40);
-	chay(7);
-	mau = Obj_detectColor();
-	if(mau == "Green" || mau == "Purple" || mau == "Blue"){
-		F3push();
-	}
-	else{
-		F3CRL();
-	}
+	chay(10);
 }
-
-void F3push(){
-	LbGripper.moveTo(50);
-	phai(20);
+void HandleF4CRL(){
+	LbGripper.moveTo(60);
+	lui(10);
+	trai(140);
+	distance = 300;
+	followLine();
+	LbMotion.stopAndWait();
+	phai(40);
+	chay(10);
 	LbGripper.open();
-	trai(20);
-	lui(7);
-	phai(140);
-	distance = 150;
-	followLine();
-	LbMotion.stopAndWait();
-	trai(90);
-	distance = 600;
-	followLine();
-	LbMotion.stopAndWait();
-	trai(40);
-	chay(20);
 }
-
-void F3CRL(){
-	LbGripper.moveTo(50);
-	lui(7);
-	phai(140);
-	distance = 150;
-	followLine();
-	LbMotion.stopAndWait();
-	trai(90);
-	distance = 600;
-	followLine();
-	LbMotion.stopAndWait();
-	trai(40);
-	chay(20);
-}
-// Cấu hình Leanbot===============================
-void setup() {
-  Leanbot.begin();
-  LbIRLine.doManualCalibration(TB1A);
-  APDS.begin();
-}
-//================================================
-
 //Chạy leanbot====================================
 void loop() {
   LbMission.begin( TB1A + TB1B );
   speed = 2000;
-  HandleE3();
+  HandleH2();
   LbMission.end();
 }
 //================================================
