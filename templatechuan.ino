@@ -181,14 +181,14 @@ String Obj_detectColor(){
 // các hàm di chuyển cơ bản, có quy ước để rẽ tốt nhất
 
 void thang(int kc) {
-  LbMotion.runLRrpm(30, 30);
-  LbMotion.waitDistanceMm(kc * 10);
+  LbMotion.runLRrpm(50, 50);
+  LbMotion.waitDistanceMm(kc);
   LbMotion.stopAndWait();
 }
 
 void lui(int kc) {
-  LbMotion.runLRrpm(-30, -30);
-  LbMotion.waitDistanceMm(kc * 10);
+  LbMotion.runLRrpm(-50, -50);
+  LbMotion.waitDistanceMm(kc);
   LbMotion.stopAndWait();
 }
 
